@@ -1,0 +1,10 @@
+{% if latest_accounts_list %}
+    <ul>
+    {% for account in latest_accounts_list %}
+        <li><a href="/accounts/{{ account.account_id }}/">{{ account.account_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No accounts are available.</p>
+{% endif %}
+
